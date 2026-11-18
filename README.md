@@ -17,3 +17,29 @@ https://github.com/user-attachments/assets/3969534d-def0-4773-9b95-347f340f88cc
 
 https://github.com/user-attachments/assets/ce684cee-b524-40be-a727-0d45c33e9763
 
+## Hardware
+
+Prototype components
+- Raspberry Pi with a Pi Camera Rev 1.3
+- A servo motor and a stepper motor for sorting
+
+Wiring used in the test scripts (`HardwareTesting/`, BCM pin numbers)
+- Servo signal (50 Hz PWM): GPIO 17
+- Stepper IN1 to IN4: GPIO 17, 18, 27, 22
+
+Stepper test script positions (2048 steps per revolution)
+- Paper: 0 degrees
+- Plastic: 90 degrees
+- Metal: 180 degrees
+- Other: 270 degrees
+
+Running the motor tests (on the Raspberry Pi)
+
+```
+python3 HardwareTesting/StepperMotor.py
+python3 HardwareTesting/ServoMotor.py
+```
+
+Type paper, plastic, metal or other to move to that position, or q to quit.
+
+Photos and videos of the tests are in `HardwareTestingMedia/`. The chosen mechanical design is in `PossibleDesigns/Selected_Design/`.
